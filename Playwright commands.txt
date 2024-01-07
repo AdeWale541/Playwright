@@ -1,0 +1,5 @@
+npx playwright test ./test/sample.spec.js --project=chromium --workers 1 --headed --debug
+npx playwright show-report
+npx playwright codegen --browser webkit --device="iPhone 11" --viewport-size=800,600 --target javascript -o record ./test/sample.spec.js
+npx playwright show-trace ./test-resul/sample.spec.js/trace.zip
+npx playwright test ./test/sample.spec.js --trace on/off/retain-on-failure/on-first-retry
